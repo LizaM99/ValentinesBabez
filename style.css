@@ -16,7 +16,10 @@ body {
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.2);
   width: 400px;
+
+  position: relative; /* 🔑 ADD THIS */
 }
+
 
 .screen.active {
   display: block;
@@ -58,15 +61,16 @@ input {
 /* Photobooth strip */
 .photobooth {
   position: absolute;
-  left: 350px;
+  right: 400px;              /* sticks out of card */
   top: 50%;
-  transform: translateY(-40%) rotate(-10deg);
+  transform: translateY(-50%) rotate(-10deg);
   background: #b0c5db;
   padding: 10px;
   border-radius: 15px;
   box-shadow: 0 15px 30px rgba(126, 6, 6, 0.634);
   width: 150px;
 }
+
 
 .photo-strip {
   height: 300px; /* 3 photos × 80px */
@@ -128,12 +132,14 @@ input {
 }
 
 .tabs {
-  position: absolute;
+  position: fixed;   /* 🔑 was absolute */
   top: 15px;
   right: 15px;
   display: flex;
   gap: 8px;
+  z-index: 1000;     /* 🔑 stay above cards */
 }
+
 
 .tabs button {
   background: rgba(255,255,255,0.9);
@@ -155,4 +161,12 @@ input {
 
 .locked:hover .lock {
   display: inline;
+}
+
+@media (max-width: 500px) {
+  .photobooth {
+    right: -40px;
+    width: 120px;
+    transform: translateY(-50%) rotate(-6deg);
+  }
 }

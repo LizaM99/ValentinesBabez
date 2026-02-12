@@ -6,25 +6,19 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <body>
+
+  <div class="tabs">
+    <button onclick="goToScreen('Birthday')">🎂 Birthday</button>
+    <button onclick="goToScreen(2)">💘 Valentine’s</button>
+    <button class="locked" onmouseenter="showLock(this)" onmouseleave="hideLock(this)">
+      🍾 Anniversary <span class="lock">🔒</span>
+    </button>
+  </div>
+
 
   <!-- SCREEN 1 -->
   <div class="screen active" id="screen1">
-    <div class="tabs">
-      <button onclick="goToScreen('Birthday')">
-        🎂 Birthday
-      </button>
-
-      <button class="locked" onmouseenter="showLock(this)" onmouseleave="hideLock(this)">
-        💘 Valentine’s
-        <span class="lock">🔒</span>
-      </button>
-
-
-      <button class="locked" onmouseenter="showLock(this)" onmouseleave="hideLock(this)">
-        🍾 Anniversary
-        <span class="lock">🔒</span>
-      </button>
-    </div>
 
     <div class="photobooth">
       <div class="photo-strip" id="photoStrip">
