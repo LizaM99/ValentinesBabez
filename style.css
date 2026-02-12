@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
-  background: linear-gradient(to bottom right, #ffafbd, #ffc3a0);
+  background: linear-gradient(to bottom right, #cf7887, #ffc3a0);
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -15,7 +15,7 @@ body {
   padding: 40px;
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-  width: 300px;
+  width: 400px;
 }
 
 .screen.active {
@@ -44,4 +44,115 @@ button:hover {
 
 #noBtn {
   position: absolute;
+}
+
+input {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  width: 80%;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Photobooth strip */
+.photobooth {
+  position: absolute;
+  left: 350px;
+  top: 50%;
+  transform: translateY(-40%) rotate(-10deg);
+  background: #b0c5db;
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 0 15px 30px rgba(126, 6, 6, 0.634);
+  width: 150px;
+}
+
+.photo-strip {
+  height: 300px; /* 3 photos × 80px */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: transform 0.3s ease;
+}
+
+.photo-strip img {
+  width: 100%;
+  height: 95px;          /* 🔑 FIXED HEIGHT */
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;        /* 🔑 PREVENT COLLAPSING */
+}
+
+.photo {
+  width: 100%;
+  max-width: 250px;
+  border-radius: 15px;
+  margin: 20px 0;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.gallery img {
+  width: 100%;
+  height: 110px;          /* BIGGER */
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  background: white;
+  padding: 4px;
+
+}
+
+.gallery img:hover {
+  transform: scale(1.03);
+  transition: transform 0.2s ease;
+}
+
+
+
+.arrow {
+  width: 100%;
+  background: none;
+  color: rgb(185, 91, 91);
+  font-size: 18px;
+  cursor: pointer;
+  border: none;
+}
+
+.tabs {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: flex;
+  gap: 8px;
+}
+
+.tabs button {
+  background: rgba(255,255,255,0.9);
+  color: #333;
+  border-radius: 15px;
+  padding: 6px 12px;
+  font-size: 14px;
+  position: relative;
+}
+
+.tabs button:hover {
+  background: #ffe0e9;
+}
+
+.lock {
+  display: none;
+  margin-left: 5px;
+}
+
+.locked:hover .lock {
+  display: inline;
 }

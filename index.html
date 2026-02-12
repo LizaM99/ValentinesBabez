@@ -9,15 +9,50 @@
 
   <!-- SCREEN 1 -->
   <div class="screen active" id="screen1">
+    <div class="tabs">
+      <button onclick="goToScreen('Birthday')">
+        🎂 Birthday
+      </button>
+
+      <button class="locked" onmouseenter="showLock(this)" onmouseleave="hideLock(this)">
+        💘 Valentine’s
+        <span class="lock">🔒</span>
+      </button>
+
+
+      <button class="locked" onmouseenter="showLock(this)" onmouseleave="hideLock(this)">
+        🍾 Anniversary
+        <span class="lock">🔒</span>
+      </button>
+    </div>
+
+    <div class="photobooth">
+      <div class="photo-strip" id="photoStrip">
+        <img src="images/us-cats.JPEG" />
+        <img src="images/india-sunshine.JPEG" />
+        <img src="images/museum-date.JPEG" />
+      </div>
+    </div>
+
     <h1>Hi Babesiiiiie 💕</h1>
     <p>I made this just for you.</p>
-    <button onclick="goToScreen(2)">Start 💖</button>
+    <button onclick="goToScreen(5)">Start 💖</button>
   </div>
+
+  <!-- SCREEN 1.5 PASSWORD -->
+  <div class="screen" id="screenPassword">
+    <h1>One more thing 😌</h1>
+    <p>What’s our special date? 💕</p>
+    <input type="password" id="passwordInput" placeholder="DD/MM/YYYY" />
+    <p id="passwordError"></p>
+    <button onclick="checkPassword()">Enter 💘</button>
+  </div>
+
 
   <!-- SCREEN 2 -->
   <div class="screen" id="screen2">
     <h1>Will you be my Valentine?</h1>
-    <h2>You should be asking me that btw</h2>
+    <h3>You should be asking me that btw</h3>
     <div class="buttons">
       <button id="yesBtn" onclick="goToScreen(3)">YES 💘</button>
       <button id="noBtn">NO 😐</button>
@@ -38,14 +73,59 @@
 
   <!-- SCREEN 4 -->
   <div class="screen" id="screen4">
+    <div class="tabs">
+      <button onclick="goToScreen(1)">
+        🌚 Back
+      </button>
+    </div>
+    
     <h1>I love you ❤️</h1>
     <p>
-      Even from miles away, you're my favorite person.
+      Despite all the miles between us, we are and will make this work.
       <br><br>
-      Happy Valentine’s Day & Happy Anniversary 💘
+      Happy Valentine’s Day & Happy early Anniversary BabeeeZ 💘
     </p>
-    <button onclick="confetti()">Yes, forever 💖</button>
+    <button onclick="confetti()">To the moon and back, mon amour 💖</button>
   </div>
+
+  <div class="screen" id="screenBirthday">
+    <img src="images/phone-babe.jpg" alt="lil joke" class="photo" />
+    <h1>Happy Birthday 🎂</h1>
+    <p>This one’s just for you 💕</p>
+    <button onclick="goToScreen(1)">Back</button>
+  </div>
+
+  <div class="screen" id="screenAnniversary">
+    <h1>Happy 2 Years Anniversary 🍾</h1>
+    <p>Another year with you, always worth it ❤️</p>
+    <button onclick="goToScreen(1)">Back</button>
+  </div>
+
+  <div class="screen" id="screenValentines">
+    <h1>Happy 2 Years Anniversary 🍾</h1>
+    <p>Another year with you, always worth it ❤️</p>
+    <button onclick="goToScreen('Password')">Back</button>
+  </div>
+
+<div class="screen" id="screen5">
+  <h1>Our Best Moments 💕</h1>
+
+  <div class="gallery">
+      <img src="images/cabin.JPEG" />
+      <img src="images/first-sneak.JPEG" />
+      <img src="images/tea-date.JPEG" />
+      <img src="images/turkey-kitten.JPEG" />
+      <img src="images/oman-nizwa-date.JPEG" />
+      <img src="images/last-day-uk.JPEG" />
+      <img src="images/india-date.JPEG" />
+      <img src="images/the-bear.JPEG" />
+      <img src="images/oncall.JPEG" />
+      
+    </div>
+
+    <button onclick="goToScreen(1)">Back 💖</button>
+  </div>
+
 
   <script src="script.js"></script>
 </body>
