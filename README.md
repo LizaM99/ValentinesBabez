@@ -14,3 +14,12 @@ Unlock Tabs:
   💘 Valentine’s
 </button>
 ```
+
+
+Because I keep forgetting
+```
+git status
+git add .
+git commit -m "Describe what you changed"
+git push
+```
