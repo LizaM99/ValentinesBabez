@@ -85,7 +85,7 @@ function checkPassword() {
 
   if (input === correctPassword) {
     error.textContent = "";
-    goToScreen(2);
+    goToScreen('Anniversary');
   } else {
     error.textContent = "Hmm… try again 😏 And make sure to include the /";
   }
